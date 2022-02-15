@@ -1,0 +1,24 @@
+.logo-app {
+  display: flex;
+  width: 265px;
+  height: 60px;
+
+  &__image {
+    min-width: 105px;
+    height: 60px;
+    margin-right: 25px;
+    background-image: url("../../assets/svg/header/logo-app.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    width: 135px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #5F5555;
+  }
+}

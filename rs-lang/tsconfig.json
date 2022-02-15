@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "allowJs": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "baseUrl": "src/",
+    "paths": {
+      "common-components/*": ["common-components/*"],
+      "constants/*": ["constants/*"],
+      "pages/*": ["pages/*"],
+      "services/*": ["services/*"],
+      "types/*": ["types/*"],
+      "utils/*": ["utils/*"]
+    }
+  },
+  "files": ["src/index.ts"],
+  "exclude": ["node_modules"]
+}
