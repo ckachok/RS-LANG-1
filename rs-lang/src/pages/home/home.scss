@@ -1,0 +1,26 @@
+@import "../../variables.scss";
+
+.home-container {
+  position: relative;
+}
+
+.decorative-circle {
+  position: absolute;
+  left: 80%;
+  border: 3px solid #0274D9;
+  border-radius: 100%;
+  background: rgba(2, 116, 217, 0.4);
+  transform: translate(-50%, -50%);
+
+  &_small {
+    top: 56%;
+    width: 30px;
+    height: 30px;
+  }
+
+  &_big {
+    top: 49%;
+    width: 55px;
+    height: 55px;
+  }
+}
