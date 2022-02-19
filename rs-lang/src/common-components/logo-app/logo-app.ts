@@ -1,5 +1,5 @@
 import BaseComponent from 'common-components/base-component';
-import { PAGE_INFO } from 'pages/_constants';
+import PAGE_INFO from 'pages/_constants';
 import 'common-components/logo-app/logo-app.scss';
 
 class Logo extends BaseComponent<HTMLAnchorElement> {
