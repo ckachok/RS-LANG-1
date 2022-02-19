@@ -70,6 +70,8 @@ class Authorization extends BaseComponent {
 
       if (isValidUserName && isValidEmail && isValidPassword) {
         this.userData = this.getFormFieldValues();
+      } else {
+        return;
       }
 
       const dataAllUsers: IUserData[] = JSON.parse(localStorage.getItem('dataAllUsers')) || [];

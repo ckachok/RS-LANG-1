@@ -1,4 +1,4 @@
-import { PAGE_INFO } from 'pages/_constants';
+import PAGE_INFO from 'pages/_constants';
 import { IMenuData } from 'types/interfaces';
 
 const MENU_DATA: IMenuData = {

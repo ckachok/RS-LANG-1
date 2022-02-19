@@ -4,7 +4,7 @@ import AudioCallPage from 'pages/audio-call/audio-call';
 import SprintPage from 'pages/sprint/sprint';
 import StatisticsPage from 'pages/statistics/statistics';
 import AboutTeamPage from 'pages/about-team/about-team';
-import { PAGE_INFO } from 'pages/_constants';
+import PAGE_INFO from 'pages/_constants';
 
 class App {
   container: HTMLElement;
