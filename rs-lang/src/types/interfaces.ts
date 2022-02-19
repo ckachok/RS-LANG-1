@@ -79,3 +79,7 @@ export interface IUserWordRequest {
   success?: IUserWordData;
   error?: string;
 }
+export interface aaa {
+  a: string;
+  b: string;
+}
