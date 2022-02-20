@@ -1,0 +1,213 @@
+.header {
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+  }
+}
+
+.user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  &__welcome {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 35px;
+    color: #5F5555;
+    text-shadow: 0 0 10px #FFFFFF, 0 0 10px #0274D9,
+                 0 0 30px #FFFFFF, 0 0 30px #0274D9;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__log-in-button {
+    width: 48px;
+    height: 48px;
+    margin: 0 30px;
+    background-image: url("../../assets/svg/header/user.svg");
+  }
+
+  &__log-out-button {
+    position: absolute;
+    top: 45px;
+    left: 105px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 35px;
+    color: #5F5555;
+    opacity: 0;
+    transition: opacity .5s;
+
+    &.active {
+      opacity: 1;
+      transition: opacity .5s;
+    }
+  }
+}
+
+.burger-menu {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 24px;
+
+  &::after,
+  &::before,
+  &__line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #5F5555;
+    transition: all 0.3s ease 0s;
+  }
+
+  &::after {
+    content: "";
+    bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    top: 0;
+  }
+
+  &__line {
+    top: 10px;
+  }
+
+  &.active {
+    left: 5px;
+    z-index: 100;
+
+    &::after {
+      bottom: 47%;
+      background-color: #FFF;
+      transform: rotate(45deg) translate(0, 50%);
+    }
+
+    &::before {
+      top: 50%;
+      background-color: #FFF;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+
+    & .burger-menu__line {
+      display: none;
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 428px;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  transform: translateX(100%);
+  transition: transform .5s ease;
+
+  &.active {
+    transform: translateX(0);
+    transition: transform .5s ease;
+  }
+
+  &__list {
+    width: 340px;
+    margin: 130px auto 0;
+  }
+
+  &__item {
+    height: 36px;
+    margin: 0 0 30px 0;
+
+    &:nth-child(5) {
+      display: none;
+
+      &.active {
+        display: list-item;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 0 0 50px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    text-shadow: 1px 0 1px #5F5555, 1px 1px #5F5555,
+                -1px 0 1px #5F5555, 0 -1px 1px #5F5555;
+    color: #FFFFFF;
+    transition: all .5s;
+  }
+
+  &__item &__link {
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    &:hover,
+    &.active {
+      color: #9ACBF8;
+      transition: all .5s;
+    }
+  }
+
+  &__item:nth-child(1) &__link {
+    background-image: url('../../assets/svg/menu/home.svg');
+
+    &:hover,
+    &.active {
+      background-image: url('../../assets/svg/menu/home-hover.svg');
+    }
+  }
+
+  &__item:nth-child(2) &__link {
+    background-image: url('../../assets/svg/menu/textbook.svg');
+
+    &:hover,
+    &.active {
+      background-image: url('../../assets/svg/menu/textbook-hover.svg');
+    }
+  }
+
+  &__item:nth-child(3) &__link,
+  &__item:nth-child(4) &__link {
+    background-image: url('../../assets/svg/menu/games.svg');
+
+    &:hover,
+    &.active {
+      background-image: url('../../assets/svg/menu/games-hover.svg');
+    }
+  }
+
+  &__item:nth-child(5) &__link {
+    background-image: url('../../assets/svg/menu/statistics.svg');
+
+    &:hover,
+    &.active {
+      background-image: url('../../assets/svg/menu/statistics-hover.svg');
+    }
+  }
+
+  &__item:nth-child(6) &__link {
+    background-image: url('../../assets/svg/menu/team.svg');
+
+    &:hover,
+    &.active {
+      background-image: url('../../assets/svg/menu/team-hover.svg');
+    }
+  }
+}
